@@ -14,5 +14,11 @@ class Lead extends Model
         'email',
         'phone',
         'status',
+        'user_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
