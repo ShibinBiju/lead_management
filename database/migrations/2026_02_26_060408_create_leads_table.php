@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->enum('status', ['New', 'Contacted', 'Converted'])->default('New');
+            $table->softDeletes(); // add this
             $table->timestamps();
         });
     }
